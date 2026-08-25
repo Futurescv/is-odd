@@ -26,6 +26,35 @@ console.log(isOdd(0)); //=> false
 console.log(isOdd(2)); //=> false
 ```
 
+## 中文说明
+
+**is-odd** 是一个极简的 Node.js 工具库，用于判断给定数值是否为**奇数**。
+
+### 用途
+
+- 输入数字或数字字符串，返回布尔值：奇数返回 `true`，偶数返回 `false`
+- 仅对**整数**生效，且不超过 JavaScript 的 `Number.MAX_SAFE_INTEGER`（9007199254740991）
+- 非整数（如 `1.5`）、超出安全整数范围的值会抛出错误，避免静默给出错误结果
+
+### 用法示例
+
+```js
+const isOdd = require('is-odd');
+
+isOdd(1);        //=> true
+isOdd('3');      //=> true（支持字符串形式）
+isOdd(0);        //=> false
+isOdd(2);        //=> false
+```
+
+安装：
+
+```sh
+npm install --save is-odd
+```
+
+> 该库常与 [is-even](https://www.npmjs.com/package/is-even)（判断偶数）配套使用。
+
 ## About
 
 <details>
